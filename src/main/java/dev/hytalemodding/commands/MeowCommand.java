@@ -8,16 +8,16 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 
-public class ExampleCommand extends AbstractCommand {
+public class MeowCommand extends AbstractCommand {
 
-    public ExampleCommand(String name, String description) {
+    public MeowCommand(String name, String description) {
         super(name, description);
     }
 
     @Nullable
     @Override
     protected CompletableFuture<Void> execute(@Nonnull CommandContext context) {
-        context.sendMessage(Message.raw("Hello from ExampleCommand!"));
+        context.sendMessage(Message.raw("<Meow>!"));
         return CompletableFuture.completedFuture(null);
     }
 
